@@ -18,6 +18,8 @@ Credential som innehåller folkbokföringsadress för en person, inklusive namn 
 
 - `adress` (string): Gatuadress [mandatory] [sd=always]
 
+
+
 - `postnummer` (string): Postnummer [mandatory] [sd=always]
 
 - `postort` (string): Postort [mandatory] [sd=always]
