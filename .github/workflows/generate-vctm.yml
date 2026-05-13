@@ -1,0 +1,24 @@
+name: Generate VCTM
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "credentials/**/*.md"
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: sirosfoundation/mtcvctm@v1
+        with:
+          input-dir: ./credentials
+          output-dir: ./vctm
+          base-url: https://raw.githubusercontent.com/reoaskv/skv-vctm-test/main
+          vctm-branch: vctm
+          normalize: true
