@@ -1,0 +1,4 @@
+ts11:
+  attestation_level: basic
+  binding: none
+  rulebook: eu-wallet
